@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>28.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>loci</groupId>
+	<artifactId>adaptive-coloc</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>AdaptiveColoc</name>
+	<description>Adaptive colocalization algorithms.</description>
+	<url>https://github.com/uw-loci/adaptive-coloc</url>
+	<inceptionYear>2018</inceptionYear>
+	<organization>
+		<name>LOCI</name>
+		<url>https://loci.wisc.edu/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Simplified BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>etadobson</id>
+			<name>Ellen TA Dobson</name>
+			<url>https://imagej.net/User:Etarena</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>reviewer</role>
+				<role>debugger</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<url>https://imagej.net/User:Rueden</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>reviewer</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tags/adaptivecoloc</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/uw-loci/adaptive-coloc</connection>
+		<developerConnection>scm:git:git@github.com:uw-loci/adaptive-coloc</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/uw-loci/adaptive-coloc</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/uw-loci/adaptive-coloc/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/uw-loci/adaptive-coloc</url>
+	</ciManagement>
+
+	<properties>
+		<package-name>loci.adaptivecoloc</package-name>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.copyrightOwners>Board of Regents of the University of
+Wisconsin-Madison.</license.copyrightOwners>
+
+		<!-- NB: Deploy releases to the SciJava Maven repository. -->
+		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej-ops</artifactId>
+		</dependency>
+
+		<!-- Test scope dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej-ops</artifactId>
+			<version>${imagej-ops.version}</version>
+			<classifier>tests</classifier>
+			<scope>test</scope>
+		</dependency>
+		<!-- NB: Needed by net.imagej:imagej-ops:tests -->
+		<dependency>
+			<groupId>io.scif</groupId>
+			<artifactId>scifio</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+</project>
