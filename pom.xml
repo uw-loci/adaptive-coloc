@@ -78,8 +78,8 @@
 		<url>https://github.com/uw-loci/adaptive-coloc/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.com/uw-loci/adaptive-coloc</url>
+		<system>GitHub Actions</system>
+		<url>https://github.com/uw-loci/adaptive-coloc/actions</url>
 	</ciManagement>
 
 	<properties>
@@ -89,7 +89,7 @@
 Wisconsin-Madison.</license.copyrightOwners>
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
-		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
 	</properties>
 
 	<dependencies>
